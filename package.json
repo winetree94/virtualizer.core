@@ -1,0 +1,47 @@
+{
+  "name": "frontendlibrarydevelopmentkit",
+  "version": "1.0.0",
+  "description": "frontend library development starter",
+  "main": "build/library-name.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "clean": "rimraf ./temp ./build ./docs ./dist",
+    "start": "start-storybook -p 6006 --ci",
+    "build": "npm run clean && npm run build:library && npm run build:storybook",
+    "build:storybook": "build-storybook -o ./docs",
+    "build:library": "cross-env webpack",
+    "test": "ts-node node_modules/jasmine/bin/jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@winetree94.github.com:winetree94/FrontEndLibraryDevelopmentKit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/html": "^6.4.19",
+    "@types/jasmine": "^4.0.0",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "http-server": "^14.1.0",
+    "jasmine": "^4.0.2",
+    "prettier": "^2.6.1",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.2.8",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
