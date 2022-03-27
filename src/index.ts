@@ -1,5 +1,3 @@
-export default class A {
-  public constructor() {
-    console.log(1);
-  }
-}
+import { Virtualizer } from './virtualizer';
+
+export default Virtualizer;
