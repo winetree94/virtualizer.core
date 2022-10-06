@@ -13,15 +13,35 @@ export type VNode<V> = {
    */
   rect: VRect;
 
+  /**
+   *
+   */
+  children?: VNode<unknown>[];
+
+  /**
+   *
+   */
   getLayout: () => HTMLElement;
 
-  onInit: () => void;
+  /**
+   *
+   */
+  onInit?: () => void;
 
-  onMounted: () => void;
+  /**
+   *
+   */
+  onMounted?: () => void;
 
-  onUnmounted: () => void;
+  /**
+   *
+   */
+  onUnmounted?: () => void;
 
-  onDestory: () => void;
+  /**
+   *
+   */
+  onDestory?: () => void;
 };
 
 export type VNodeConstructor<V> = new (data: V) => VNode<V>;

@@ -1,8 +1,5 @@
 export type VRect = {
-  top: number;
-  left: number;
-  width: number;
-  height: number;
+  size: number;
 };
 
 export type VInternalRect = {
